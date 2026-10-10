@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Ahmed — Computer Engineering & Cybersecurity</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Menlo', 'Monaco', 'Courier New', 'monospace']
+                    }
+                }
+            }
+        };
+    </script>
+    <!-- Inter Font & Lucide/FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        ::selection {
+            background-color: #0f172a;
+            color: #ffffff;
+        }
+        .dark ::selection {
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 antialiased font-sans transition-colors duration-200 min-h-screen selection:bg-slate-900 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#about" class="font-semibold text-slate-900 dark:text-white tracking-tight text-base hover:opacity-80 transition-opacity">
+                Omar Ahmed
+            </a>
+            
+            <nav class="flex items-center gap-6 text-sm text-slate-600 dark:text-slate-400">
+                <a href="#projects" class="hover:text-slate-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="#education" class="hover:text-slate-900 dark:hover:text-white transition-colors">Education</a>
+                <a href="#certifications" class="hover:text-slate-900 dark:hover:text-white transition-colors">Certifications</a>
+                <a href="#skills" class="hover:text-slate-900 dark:hover:text-white transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-slate-900 dark:hover:text-white transition-colors">Contact</a>
+                
+                <!-- Dark / Light Theme Toggle -->
+                <button id="themeToggle" aria-label="Toggle theme" class="p-1.5 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                    <i class="fa-regular fa-moon dark:hidden text-sm"></i>
+                    <i class="fa-regular fa-sun hidden dark:inline text-sm"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 sm:py-16 space-y-16 sm:space-y-20">
+
+        <section id="about" class="space-y-6 pt-4">
+            <div class="space-y-2">
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                    Omar Ahmed Abdel Hameed Abdel Qader
+                </h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400 font-medium">
+                    Computer Engineering Student &amp; Cybersecurity Specialist
+                </p>
+            </div>
+
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl text-base">
+                Pursuing a dual Bachelor of Science in Computer and Artificial Intelligence Engineering between 
+                <span class="text-slate-900 dark:text-white font-medium">Ain Shams University</span> and 
+                <span class="text-slate-900 dark:text-white font-medium">University of East London</span>. 
+                Focused on defensive systems programming, applied cryptography (mTLS 1.3, SHA-256), memory safety analysis, and secure software architecture.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-3 pt-1 text-sm">
+                <a href="mailto:contact@omarahmed.dev" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-medium hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors shadow-sm">
+                    <i class="fa-regular fa-envelope text-xs"></i> Email Me
+                </a>
+                <button onclick="copyInfo('+20 100 556 0337', 'Phone number copied!')" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <i class="fa-solid fa-phone text-xs text-slate-500"></i> +20 100 556 0337
+                </button>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <i class="fa-brands fa-linkedin text-sm text-slate-600 dark:text-slate-400"></i> LinkedIn
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <i class="fa-brands fa-github text-sm text-slate-600 dark:text-slate-400"></i> GitHub
+                </a>
+            </div>
+        </section>
+
+        <section id="projects" class="space-y-6 scroll-mt-20">
+            <div class="border-b border-slate-200 dark:border-slate-800 pb-3 flex items-center justify-between">
+                <div>
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Selected Projects</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Systems engineering, cryptography, and defensive security tooling</p>
+                </div>
+                <span class="text-xs font-mono px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+                    4 Projects
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <!-- Card 1: P2P Secure File Sharing -->
+                <article class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between overflow-hidden">
+                    <div class="p-5 border-b border-slate-100 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/90">
+                        <div class="flex items-start justify-between gap-2 mb-2.5">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-sm font-mono">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-semibold text-slate-900 dark:text-white tracking-tight leading-snug">
+                                        P2P Secure File Sharing
+                                    </h3>
+                                    <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400">Systems &amp; Network Security</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-1.5 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" title="View Source on GitHub">
+                                <i class="fa-brands fa-github text-base"></i>
+                            </a>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-600 dark:text-slate-300">
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">C++20</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Boost.Asio</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Mutual TLS 1.3</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">OpenSSL</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">libFuzzer</span>
+                        </div>
+                    </div>
+
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-500 mt-1 text-[8px]">&bull;</span>
+                                <span><strong>Cryptography &amp; PKI:</strong> Asynchronous peer-to-peer file transfer engine with Boost.Asio state machines; enforced mTLS 1.3 certificate validation and SHA-256 for payload integrity.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-500 mt-1 text-[8px]">&bull;</span>
+                                <span><strong>Threat Modeling:</strong> Defensive header parsing, filename sanitization against path traversal, and atomic transfers (<code class="bg-slate-100 dark:bg-slate-800 px-1 rounded font-mono">.part</code> files).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-500 mt-1 text-[8px]">&bull;</span>
+                                <span><strong>Memory Safety:</strong> Hardened with libFuzzer fuzzing harnesses, ASan, UBSan, and GoogleTest suites via GitHub Actions CI.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Card 2: Scapegoat Tree Library -->
+                <article class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between overflow-hidden">
+                    <div class="p-5 border-b border-slate-100 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/90">
+                        <div class="flex items-start justify-between gap-2 mb-2.5">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-sm font-mono">
+                                    <i class="fa-solid fa-diagram-project"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-semibold text-slate-900 dark:text-white tracking-tight leading-snug">
+                                        Scapegoat Tree Library
+                                    </h3>
+                                    <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400">Self-Balancing BST &amp; GUI</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-1.5 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" title="View Source on GitHub">
+                                <i class="fa-brands fa-github text-base"></i>
+                            </a>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-600 dark:text-slate-300">
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">C++</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">pybind11</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">DirectX 11 / ImGui</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">CMake</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-indigo-500 mt-1 text-[8px]">&bull;</span>
+                                <span><strong>Algorithms &amp; Complexity:</strong> &alpha;-weight-balanced tree (&alpha; = 2/3) with amortized O(log n) operations, range queries, tree merge/split, undo/redo, and STL iterators.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-indigo-500 mt-1 text-[8px]">&bull;</span>
+                                <span><strong>Minimal STL &amp; Bindings:</strong> Built custom Vector, Queue, and Stack primitives; exported C++ core to Python via pybind11 with terminal, Tkinter, and ImGui interfaces.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-indigo-500 mt-1 text-[8px]">&bull;</span>
+                                <span><strong>Validation:</strong> Stress-tested with a 50,000-operation test suite; containerized in Docker with automated Doxygen API generation.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Card 3: File Integrity Checker -->
+                <article class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between overflow-hidden">
+                    <div class="p-5 border-b border-slate-100 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/90">
+                        <div class="flex items-start justify-between gap-2 mb-2.5">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center text-sm font-mono">
+                                    <i class="fa-solid fa-fingerprint"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-semibold text-slate-900 dark:text-white tracking-tight leading-snug">
+                                        File Integrity Checker
+                                    </h3>
+                                    <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400">Cryptographic CLI Tool</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-1.5 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" title="View Source on GitHub">
+                                <i class="fa-brands fa-github text-base"></i>
+                            </a>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-600 dark:text-slate-300">
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Python</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">SHA-256</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Chunked I/O</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">JSON Persistence</span>
+                        </div>
+                    </div>
+
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-500 mt-1 text-[8px]">&bull;</span>
+                                <span><strong>Tamper Detection:</strong> Establishes a cryptographic SHA-256 baseline for directory trees, detecting silent corruptions, deletions, and unauthorized additions.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-amber-500 mt-1 text-[8px]">&bull;</span>
+                                <span><strong>Memory-Efficient Streaming:</strong> Reads file data in 8 KB chunks to prevent memory overhead during high-volume scans; persists state with JSON and set-difference comparisons.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Card 4: Breach & Strength Password Checker -->
+                <article class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between overflow-hidden">
+                    <div class="p-5 border-b border-slate-100 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/90">
+                        <div class="flex items-start justify-between gap-2 mb-2.5">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-lg bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center text-sm font-mono">
+                                    <i class="fa-solid fa-key"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-semibold text-slate-900 dark:text-white tracking-tight leading-snug">
+                                        Password Checker
+                                    </h3>
+                                    <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400">Privacy &amp; Threat Detection</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-1.5 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" title="View Source on GitHub">
+                                <i class="fa-brands fa-github text-base"></i>
+                            </a>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-600 dark:text-slate-300">
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Python</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">SHA-1</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">k-Anonymity</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300">REST API</span>
+                        </div>
+                    </div>
+
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-rose-500 mt-1 text-[8px]">&bull;</span>
+                                <span><strong>k-Anonymity Model:</strong> Queries breached credential datasets using only the first 5 hexadecimal characters of the SHA-1 hash, ensuring zero credential leakage.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-rose-500 mt-1 text-[8px]">&bull;</span>
+                                <span><strong>Entropy &amp; Rule Auditing:</strong> Performs regex-based multi-character entropy checks (uppercase, lowercase, numbers, special characters, and length requirements).</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="education" class="space-y-8 scroll-mt-20">
+            <div class="border-b border-slate-200 dark:border-slate-800 pb-3">
+                <h2 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Education &amp; Training</h2>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Dual Degree -->
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                    <div>
+                        <h3 class="text-base font-semibold text-slate-900 dark:text-white">B.Sc. in Computer and Artificial Intelligence Engineering</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Ain Shams University &amp; University of East London (Dual Degree)</p>
+                    </div>
+                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400 sm:text-right whitespace-nowrap">
+                        Expected Spring 2028
+                    </span>
+                </div>
+
+                <!-- Summer Academic Training -->
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                    <div>
+                        <h3 class="text-base font-semibold text-slate-900 dark:text-white">Big Data Summer Training</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">University of East London &bull; Intensive training covering Big Data concepts, tools, and workflows</p>
+                    </div>
+                    <span class="text-xs font-mono text-slate-500 dark:text-slate-400 sm:text-right whitespace-nowrap">
+                        July 20 – July 30, 2026
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="space-y-8 scroll-mt-20">
+            <div class="border-b border-slate-200 dark:border-slate-800 pb-3">
+                <h2 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Certifications</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <div class="p-4 rounded-lg border border-slate-200 dark:border-slate-800/80 bg-white dark:bg-slate-900/50">
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-mono block">Harvard University / edX</span>
+                    <h3 class="font-semibold text-slate-900 dark:text-white mt-0.5">CS50: Cybersecurity</h3>
+                </div>
+                <div class="p-4 rounded-lg border border-slate-200 dark:border-slate-800/80 bg-white dark:bg-slate-900/50">
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-mono block">Google / Coursera</span>
+                    <h3 class="font-semibold text-slate-900 dark:text-white mt-0.5">Foundations of Cybersecurity</h3>
+                </div>
+                <div class="p-4 rounded-lg border border-slate-200 dark:border-slate-800/80 bg-white dark:bg-slate-900/50">
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-mono block">Google / Coursera</span>
+                    <h3 class="font-semibold text-slate-900 dark:text-white mt-0.5">Play It Safe: Manage Security Risks</h3>
+                </div>
+                <div class="p-4 rounded-lg border border-slate-200 dark:border-slate-800/80 bg-white dark:bg-slate-900/50">
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-mono block">Google / Coursera</span>
+                    <h3 class="font-semibold text-slate-900 dark:text-white mt-0.5">Connect and Protect: Networks and Network Security</h3>
+                </div>
+                <div class="p-4 rounded-lg border border-slate-200 dark:border-slate-800/80 bg-white dark:bg-slate-900/50 sm:col-span-2">
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-mono block">IBM / Coursera</span>
+                    <h3 class="font-semibold text-slate-900 dark:text-white mt-0.5">Machine Learning with Python</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="space-y-8 scroll-mt-20">
+            <div class="border-b border-slate-200 dark:border-slate-800 pb-3">
+                <h2 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Technical Skills</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-8 text-sm">
+                <div>
+                    <h3 class="font-medium text-slate-900 dark:text-white mb-1.5">Programming Languages</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Python, C, C++, Java, JavaScript / TypeScript</p>
+                </div>
+                <div>
+                    <h3 class="font-medium text-slate-900 dark:text-white mb-1.5">Security Concepts</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Cryptography, PKI / Certificates, Threat Modeling, Input Validation, Memory Safety</p>
+                </div>
+                <div>
+                    <h3 class="font-medium text-slate-900 dark:text-white mb-1.5">Testing &amp; Dynamic Analysis</h3>
+                    <p class="text-slate-600 dark:text-slate-400">AddressSanitizer (ASan), UndefinedBehaviorSanitizer (UBSan), libFuzzer, GoogleTest, CI/CD</p>
+                </div>
+                <div>
+                    <h3 class="font-medium text-slate-900 dark:text-white mb-1.5">Linux / Unix</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Shell Scripting (Bash), POSIX Environment, System Administration &amp; CLI Tooling</p>
+                </div>
+                <div>
+                    <h3 class="font-medium text-slate-900 dark:text-white mb-1.5">Tools &amp; Build</h3>
+                    <p class="text-slate-600 dark:text-slate-400">CMake, Git / GitHub Actions, Docker, Doxygen, pybind11, Tkinter, DirectX 11 / ImGui</p>
+                </div>
+                <div>
+                    <h3 class="font-medium text-slate-900 dark:text-white mb-1.5">Operating Systems &amp; Networking</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Process &amp; Memory Management, File Systems, TCP/IP, OSI Model, Network Protocols</p>
+                </div>
+                <div class="sm:col-span-2 pt-2 border-t border-slate-100 dark:border-slate-800/60">
+                    <h3 class="font-medium text-slate-900 dark:text-white mb-1.5">Spoken Languages</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Arabic (Native), English (Fluent)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800">
+            <div class="space-y-1">
+                <h2 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Contact</h2>
+                <p class="text-sm text-slate-600 dark:text-slate-400">
+                    Available for software engineering, systems development, and cybersecurity roles.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-6 text-sm">
+                <a href="tel:+201005560337" class="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-xs text-slate-400"></i> +20 100 556 0337
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center gap-2">
+                    <i class="fa-brands fa-linkedin text-sm text-slate-400"></i> LinkedIn Profile
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center gap-2">
+                    <i class="fa-brands fa-github text-sm text-slate-400"></i> GitHub Profile
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
+            <p>&copy; 2026 Omar Ahmed Abdel Hameed Abdel Qader</p>
+            <a href="#about" class="hover:text-slate-800 dark:hover:text-slate-300 transition-colors">Back to top &uarr;</a>
+        </div>
+    </footer>
+
+    <!-- Clean toast notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 px-4 py-2.5 rounded-lg shadow-lg text-xs font-medium flex items-center gap-2">
+        <i class="fa-solid fa-check text-emerald-400 dark:text-emerald-600"></i>
+        <span id="toastMsg">Copied!</span>
+    </div>
+
+    <script>
+        // Theme toggle logic (respects system preference + user toggle)
+        const themeToggleBtn = document.getElementById('themeToggle');
+        
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Copy helper
+        function copyInfo(text, message) {
+            try {
+                const tempEl = document.createElement('textarea');
+                tempEl.value = text;
+                tempEl.style.position = 'fixed';
+                tempEl.style.left = '-9999px';
+                document.body.appendChild(tempEl);
+                tempEl.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempEl);
+
+                const toast = document.getElementById('toast');
+                const toastMsg = document.getElementById('toastMsg');
+                toastMsg.textContent = message;
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                toast.classList.add('translate-y-0', 'opacity-100');
+
+                setTimeout(() => {
+                    toast.classList.remove('translate-y-0', 'opacity-100');
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                }, 2500);
+            } catch (e) {
+                // silent fallback
+            }
+        }
+    </script>
+</body>
+</html>
